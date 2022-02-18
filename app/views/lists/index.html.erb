@@ -1,6 +1,14 @@
-<h1>Lists</h1>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<h1>Welcome to Movie Lists</h1>
+<p>Your site for all things movies</p>
+
+
+<div class="container py-5">
+  <h4>Most popular lists</h4>
+    <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
